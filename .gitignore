@@ -1,18 +1,57 @@
-# binaries
+# ===== Go build =====
+bin/
+build/
+dist/
+*.exe
+*.out
+*.test
+
+# Go modules cache (локальные)
+vendor/
+
+# ===== Archives / binaries =====
+*.tar
 *.tar.gz
 *.zip
+*.iso
 *.bin
 
-# go build
-url-shortener
-*.exe
-
-# minikube
+# ===== Local tools (devops tools) =====
 minikube*
-.iso
+kubectl*
+terraform*
+helm*
+kubeconfig*
 
-# mac
-.DS_Store
-
-# docker
+# ===== Logs =====
 *.log
+logs/
+
+# ===== Environment files =====
+.env
+.env.*
+!.env.example
+
+# ===== IDE =====
+.vscode/
+.idea/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Docker =====
+docker-compose.override.yml
+
+# ===== Terraform =====
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# ===== Helm =====
+charts/*.tgz
+
+# ===== Misc =====
+tmp/
+temp/
