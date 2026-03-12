@@ -17,7 +17,7 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
 
       - name: build image
-        run: docker build -t ${{ secrets.DOCKER_USER }}/url-shortener:${{ github.sha }} .
+        run: docker build -t ${{ secrets.DOCKER_USER }}/url-shortener:${{ github.sha }} ./url-shortener
 
       - name: push image
         run: docker push ${{ secrets.DOCKER_USER }}/url-shortener:${{ github.sha }}
