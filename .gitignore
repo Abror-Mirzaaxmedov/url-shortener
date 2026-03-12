@@ -1,0 +1,18 @@
+# binaries
+*.tar.gz
+*.zip
+*.bin
+
+# go build
+url-shortener
+*.exe
+
+# minikube
+minikube*
+.iso
+
+# mac
+.DS_Store
+
+# docker
+*.log
